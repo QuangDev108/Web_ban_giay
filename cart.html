@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>CrossCountry – Giỏ hàng</title>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="cc-header">
+    <div class="cc-header__inner">
+        <a href="index.html" class="cc-logo">
+            <svg width="56" height="50" viewBox="0 0 56 50" fill="none">
+                <ellipse cx="28" cy="42" rx="24" ry="6.5" fill="#FFD700" opacity="0.25"/>
+                <path d="M4 33 Q10 10 25 7 Q40 4 46 19 Q49 27 41 32 Q28 38 4 33Z" fill="#E53935"/>
+                <path d="M8 31 Q18 13 29 10 Q39 7 43 20" fill="none" stroke="#FFD600" stroke-width="2.3" stroke-linecap="round"/>
+                <circle cx="17" cy="25" r="3.2" fill="#111"/>
+                <circle cx="30" cy="20" r="2.6" fill="#111"/>
+                <path d="M2 34 Q1 40 7 42 Q18 46 31 44 Q43 42 48 37" fill="#1a1a1a"/>
+                <path d="M2 34 Q17 38 31 36 Q43 33 48 27 Q51 23 48 19" fill="#1565C0"/>
+            </svg>
+            <div class="cc-logo__text">
+                <div><span class="lc">CROSS</span><span class="lco">COUNTRY</span></div>
+                <div class="lt">YOUR TAGLINE GOES HERE</div>
+            </div>
+        </a>
+
+        <nav class="cc-nav">
+            <a href="index.html" class="cc-nav__a">Home</a>
+            <a href="#" class="cc-nav__a">Thể loại<span class="cc-nav__dot">●</span></a>
+            <a href="cart.html" class="cc-nav__a cc-nav__a--active">Giỏ hàng</a>
+            <a href="#cc-footer" class="cc-nav__a">Liên hệ</a>
+        </nav>
+
+        <div class="cc-search">
+            <input type="text" placeholder=""/>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- ══ CART HEADING ══ -->
+<div class="cc-cart-head">
+    <i class="fa-solid fa-cart-shopping cc-cart-head__icon"></i>
+    <h2>Giỏ hàng của bạn</h2>
+    <p>Bạn có <span class="cc-cart-count" id="total-items">0</span> sản phẩm trong giỏ hàng</p>
+</div>
+
+<!-- ══ CART BODY ══ -->
+<div class="cc-cart-wrap">
+
+    <!-- LEFT: items -->
+    <div class="cc-cart-panel" id="cart-panel">
+        <!-- filled by JS -->
+    </div>
+
+    <!-- RIGHT: summary -->
+    <div class="cc-summary">
+        <div class="cc-summary__head">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span>Tóm tắt đơn hàng</span>
+        </div>
+
+        <div class="cc-summary__rows">
+            <div class="cc-summary__row">
+                <span>Tạm tính:</span>
+                <span id="subtotal">0đ</span>
+            </div>
+            <div class="cc-summary__row">
+                <span>Phí vận chuyển:</span>
+                <span id="shipping">0đ</span>
+            </div>
+        </div>
+
+        <div class="cc-summary__divider"></div>
+
+        <div class="cc-summary__total">
+            <span>Tổng cộng:</span>
+            <span id="total" class="cc-summary__total-val">0đ</span>
+        </div>
+
+        <button class="cc-btn-checkout">
+            <i class="fa-solid fa-credit-card"></i> Thanh toán
+        </button>
+
+        <div class="cc-summary__pays">
+            <span class="cc-pay cc-pay--visa">VISA</span>
+            <span class="cc-pay"><i class="fa-solid fa-credit-card"></i></span>
+            <span class="cc-pay cc-pay--dots">····</span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ TRUST BAR ══ -->
+<div class="cc-trust">
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/san-pham-chat-luong.svg" alt=""/>
+        <span>Sản phẩm chất lượng</span>
+    </div>
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/dich-vu-chuyen-nghiep.svg" alt=""/>
+        <span>Dịch vụ chuyên nghiệp</span>
+    </div>
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/giao-hang-toan-quoc.svg" alt=""/>
+        <span>Giao hàng toàn quốc</span>
+    </div>
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/mien-phi-bao-hanh.svg" alt=""/>
+        <span>Bảo hành đầy đủ</span>
+    </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="cc-footer" id="cc-footer">
+    <h2 class="cc-footer__title">Liên hệ</h2>
+    <div class="cc-footer__line"></div>
+    <div class="cc-footer__body">
+        <div class="cc-footer__left">
+            <h3>Liên hệ trực tiếp</h3>
+            <p>
+                <img src="https://cdn.haluta.vn/media/core/icons/email.svg"
+                     onerror="this.outerHTML='<i class=\'fa-solid fa-envelope\'></i>'"
+                     class="cc-foot-icon" alt=""/>
+                Email: support@highfashion.com
+            </p>
+            <p>
+                <img src="https://cdn.haluta.vn/media/core/icons/phone.svg"
+                     onerror="this.outerHTML='<i class=\'fa-solid fa-phone\'></i>'"
+                     class="cc-foot-icon" alt=""/>
+                Hotline: 0938 9133 267
+            </p>
+        </div>
+        <div class="cc-footer__right">
+            <h3>Mạng xã hội</h3>
+            <div class="cc-footer__socials">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://cdn.haluta.vn/media/core/icons/facebook.png" alt="Facebook"/>
+                </a>
+                <a href="https://zalo.me/">
+                    <img src="https://cdn.haluta.vn/media/core/icons/zalo.png" alt="Zalo"/>
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="cc-toast" id="cc-toast"></div>
+
+<script>
+    function fmt(n){return n.toLocaleString('vi-VN')+'đ';}
+
+    function render(){
+        const c=JSON.parse(localStorage.getItem('cc_cart')||'[]');
+        const qty=c.reduce((s,i)=>s+i.qty,0);
+        document.getElementById('total-items').textContent=qty;
+
+        const panel=document.getElementById('cart-panel');
+
+        if(c.length===0){
+            panel.innerHTML=`
+                <div class="cc-empty">
+                    <i class="fa-solid fa-cart-shopping cc-empty__icon"></i>
+                    <h3>Giỏ hàng trống</h3>
+                    <p>Bạn chưa có sản phẩm trong giỏ hàng</p>
+                    <a href="index.html" class="cc-btn-continue">Tiếp tục mua sắm</a>
+                </div>
+                <div class="cc-panel-footer">
+                    <button class="cc-btn-clear" onclick="clearAll()">Xóa tất cả</button>
+                </div>`;
+            setTotals(0);
+            return;
+        }
+
+        let sub=0, html='<div class="cc-items">';
+        c.forEach((item,idx)=>{
+            sub+=item.price*item.qty;
+            html+=`
+            <div class="cc-item">
+                <div class="cc-item__info">
+                    <span class="cc-item__name">${item.name}</span>
+                    <span class="cc-item__price">${fmt(item.price)}</span>
+                </div>
+                <div class="cc-item__ctrl">
+                    <button class="cc-qty-btn" onclick="chg(${idx},-1)">−</button>
+                    <span class="cc-qty-val">${item.qty}</span>
+                    <button class="cc-qty-btn" onclick="chg(${idx},1)">+</button>
+                    <span class="cc-item__total">${fmt(item.price*item.qty)}</span>
+                    <button class="cc-item__del" onclick="del(${idx})"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>`;
+        });
+        html+=`</div><div class="cc-panel-footer">
+            <button class="cc-btn-clear" onclick="clearAll()">Xóa tất cả</button>
+        </div>`;
+        panel.innerHTML=html;
+        setTotals(sub);
+    }
+
+    function setTotals(sub){
+        const ship=sub>0?30000:0;
+        document.getElementById('subtotal').textContent=fmt(sub);
+        document.getElementById('shipping').textContent=fmt(ship);
+        document.getElementById('total').textContent=fmt(sub+ship);
+    }
+
+    function chg(idx,d){
+        let c=JSON.parse(localStorage.getItem('cc_cart')||'[]');
+        c[idx].qty=Math.max(1,c[idx].qty+d);
+        localStorage.setItem('cc_cart',JSON.stringify(c));render();
+    }
+    function del(idx){
+        let c=JSON.parse(localStorage.getItem('cc_cart')||'[]');
+        c.splice(idx,1);
+        localStorage.setItem('cc_cart',JSON.stringify(c));render();
+    }
+    function clearAll(){
+        localStorage.setItem('cc_cart','[]');render();
+    }
+
+    render();
+</script>
+</body>
+</html>

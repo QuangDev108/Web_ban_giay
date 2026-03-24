@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>CrossCountry – Trang chủ</title>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="cc-header">
+    <div class="cc-header__inner">
+        <a href="index.html" class="cc-logo">
+            <img src="./assets/images/logo.avif" />
+        </a>
+
+        <nav class="cc-nav">
+            <a href="index.html" class="cc-nav__a cc-nav__a--active">Home</a>
+            <a href="#" class="cc-nav__a">Thể loại<span class="cc-nav__dot">●</span></a>
+            <a href="cart.html" class="cc-nav__a">Giỏ hàng</a>
+            <a href="#cc-footer" class="cc-nav__a">Liên hệ</a>
+        </nav>
+
+        <div class="cc-search">
+            <input type="text" placeholder=""/>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- ══ HERO BANNER ══ -->
+<div class="cc-hero">
+    <img src="./assets/images/Background.jpg"
+         class="cc-hero__img" alt="hero"/>
+    <div class="cc-hero__overlay"></div>
+    <div class="cc-hero__text">
+        <h1>BƯỚC CHÂN TỰ TIN<br>CHINH PHỤC MỌI HÀNH TRÌNH</h1>
+        <p>Giày Chất – Giá Tốt – Phong Cách Riêng</p>
+    </div>
+</div>
+
+<!-- ══ CATEGORY ROW ══ -->
+<div class="cc-cats">
+    <div class="cc-cat cc-cat--border">
+        <img src="./assets/images/lak09206.webp" alt="Giày tây"/>
+    </div>
+    <div class="cc-cat">
+        <img src="./assets/images/giaybata.jpg" alt="Thể thao"/>
+    </div>
+    <div class="cc-cat">
+        <img src="./assets/images/giaycaogot.webp" alt="Giày nữ"/>
+    </div>
+</div>
+
+<!-- ══ SẢN PHẨM ══ -->
+<section class="cc-products">
+    <h2 class="cc-products__title">SẢN PHẨM</h2>
+    <div class="cc-products__rule"></div>
+
+    <div class="cc-prod-grid">
+
+        <div class="cc-prod">
+            <div class="cc-prod__img"><img src="./assets/images/Giay_tay.png" alt=""/></div>
+            <a class="cc-prod__name">GIÀY TÂY NAM</a>
+            <p class="cc-prod__meta"><strong>Size</strong>: 34-42</p>
+            <p class="cc-prod__meta"><strong>Giá</strong>: 350.000đ</p>
+            <div class="cc-prod__btns">
+                <button class="cc-btn-buy" onclick="addCart('Giày Tây Nam',350000)">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Tây Nam',350000)"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+        <div class="cc-prod">
+            <div class="cc-prod__img"><img src="./assets/images/vn-11134207-7r98o-lt3mz9ox97rtf1.jpg" alt=""/></div>
+            <a class="cc-prod__name">GIÀY THỂ THAO NAM</a>
+            <p class="cc-prod__meta"><strong>Size</strong>: 32-42</p>
+            <p class="cc-prod__meta"><strong>Giá</strong>: 2.000.000đ</p>
+            <div class="cc-prod__btns">
+                <button class="cc-btn-buy" onclick="addCart('Giày Thể Thao Nam',2000000)">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Thể Thao Nam',2000000)"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+        <div class="cc-prod">
+            <div class="cc-prod__img"><img src="./assets/images/giay-bup-be.jpg" alt=""/></div>
+            <a class="cc-prod__name">GIÀY BÚP BÊ NỮ</a>
+            <p class="cc-prod__meta"><strong>Size</strong>: 24-36</p>
+            <p class="cc-prod__meta"><strong>Giá</strong>: 500.000đ</p>
+            <div class="cc-prod__btns">
+                <button class="cc-btn-buy" onclick="addCart('Giày Búp Bê Nữ',500000)">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Búp Bê Nữ',500000)"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+        <div class="cc-prod">
+            <div class="cc-prod__img"><img src="./assets/images/giay_cao_got.webp" alt=""/></div>
+            <a class="cc-prod__name">GIÀY CAO GÓT</a>
+            <p class="cc-prod__meta"><strong>Size</strong>: 34-42</p>
+            <p class="cc-prod__meta"><strong>Giá</strong>: 2.000.000đ</p>
+            <div class="cc-prod__btns">
+                <button class="cc-btn-buy" onclick="addCart('Giày Cao Gót',2000000)">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Cao Gót',2000000)"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+        <div class="cc-prod">
+            <div class="cc-prod__img"><img src="./assets/images/dep_co_quai.webp" alt=""/></div>
+            <a class="cc-prod__name">GIÀY SANDAL CAO CẤP</a>
+            <p class="cc-prod__meta"><strong>Size</strong>: 32-42</p>
+            <p class="cc-prod__meta"><strong>Giá</strong>: 300.000đ</p>
+            <div class="cc-prod__btns">
+                <button class="cc-btn-buy" onclick="addCart('Giày Sandal Cao Cấp',300000)">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Sandal Cao Cấp',300000)"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+        <div class="cc-prod">
+            <div class="cc-prod__img"><img src="./assets/images/dep-le.jpg" alt=""/></div>
+            <a class="cc-prod__name">DÉP CAO SU CAO CẤP</a>
+            <p class="cc-prod__meta"><strong>Size</strong>: 22-40</p>
+            <p class="cc-prod__meta"><strong>Giá</strong>: 100.000đ</p>
+            <div class="cc-prod__btns">
+                <button class="cc-btn-buy" onclick="addCart('Dép Cao Su Cao Cấp',100000)">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Dép Cao Su Cao Cấp',100000)"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="cc-pagination">
+        <button class="cc-pg cc-pg--arrow">&#9664;</button>
+        <span class="cc-pg cc-pg--num">1</span>
+        <button class="cc-pg cc-pg--arrow">&#9654;</button>
+    </div>
+</section>
+
+<!-- ══ TRUST BAR ══ -->
+<div class="cc-trust">
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/san-pham-chat-luong.svg" alt=""/>
+        <span>Sản phẩm chất lượng</span>
+    </div>
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/dich-vu-chuyen-nghiep.svg" alt=""/>
+        <span>Dịch vụ chuyên nghiệp</span>
+    </div>
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/giao-hang-toan-quoc.svg" alt=""/>
+        <span>Giao hàng toàn quốc</span>
+    </div>
+    <div class="cc-trust__item">
+        <img src="https://cdn.haluta.vn/media/core/icons/mien-phi-bao-hanh.svg" alt=""/>
+        <span>Bảo hành đầy đủ</span>
+    </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="cc-footer" id="cc-footer">
+    <h2 class="cc-footer__title">Liên hệ</h2>
+    <div class="cc-footer__line"></div>
+    <div class="cc-footer__body">
+        <div class="cc-footer__left">
+            <h3>Liên hệ trực tiếp</h3>
+            <p>
+                <img src="https://cdn.haluta.vn/media/core/icons/email.svg"
+                     onerror="this.outerHTML='<i class=\'fa-solid fa-envelope\'></i>'"
+                     class="cc-foot-icon" alt=""/>
+                Email: support@highfashion.com
+            </p>
+            <p>
+                <img src="https://cdn.haluta.vn/media/core/icons/phone.svg"
+                     onerror="this.outerHTML='<i class=\'fa-solid fa-phone\'></i>'"
+                     class="cc-foot-icon" alt=""/>
+                Hotline: 0938 9133 267
+            </p>
+        </div>
+        <div class="cc-footer__right">
+            <h3>Mạng xã hội</h3>
+            <div class="cc-footer__socials">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://cdn.haluta.vn/media/core/icons/facebook.png" alt="Facebook"/>
+                </a>
+                <a href="https://zalo.me/">
+                    <img src="https://cdn.haluta.vn/media/core/icons/zalo.png" alt="Zalo"/>
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="cc-toast" id="cc-toast"></div>
+
+<script>
+    function fmt(n){return n.toLocaleString('vi-VN')+'đ';}
+    function addCart(name,price){
+        let c=JSON.parse(localStorage.getItem('cc_cart')||'[]');
+        const f=c.find(i=>i.name===name);
+        if(f)f.qty+=1;else c.push({name,price,qty:1});
+        localStorage.setItem('cc_cart',JSON.stringify(c));
+        showToast('✓ Đã thêm "'+name+'" vào giỏ hàng');
+    }
+    function showToast(msg){
+        const t=document.getElementById('cc-toast');
+        t.textContent=msg; t.classList.add('cc-toast--show');
+        clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('cc-toast--show'),2600);
+    }
+</script>
+</body>
+</html>
