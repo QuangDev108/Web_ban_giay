@@ -459,6 +459,20 @@ button { cursor: pointer; font-family: inherit; }
     gap: 14px;
     transition: background .1s;
 }
+
+.cc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cc-item__img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .cc-item:hover { background: #fafafa; }
 .cc-item__info {
     display: flex;
@@ -494,7 +508,7 @@ button { cursor: pointer; font-family: inherit; }
 .cc-item__total {
     font-size: 14px;
     font-weight: 700;
-    color: #333;
+    color: red;
     min-width: 90px;
     text-align: right;
 }

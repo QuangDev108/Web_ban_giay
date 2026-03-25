@@ -183,19 +183,26 @@
         let sub=0, html='<div class="cc-items">';
         c.forEach((item,idx)=>{
             sub+=item.price*item.qty;
-            html+=`
+           html += `
             <div class="cc-item">
+
+                <img src="${item.image}" class="cc-item__img"/>
+
                 <div class="cc-item__info">
                     <span class="cc-item__name">${item.name}</span>
                     <span class="cc-item__price">${fmt(item.price)}</span>
                 </div>
+
                 <div class="cc-item__ctrl">
                     <button class="cc-qty-btn" onclick="chg(${idx},-1)">−</button>
                     <span class="cc-qty-val">${item.qty}</span>
                     <button class="cc-qty-btn" onclick="chg(${idx},1)">+</button>
                     <span class="cc-item__total">${fmt(item.price*item.qty)}</span>
-                    <button class="cc-item__del" onclick="del(${idx})"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="cc-item__del" onclick="del(${idx})">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
+
             </div>`;
         });
         html+=`</div><div class="cc-panel-footer">

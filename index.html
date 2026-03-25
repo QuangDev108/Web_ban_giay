@@ -68,8 +68,8 @@
             <p class="cc-prod__meta"><strong>Size</strong>: 34-42</p>
             <p class="cc-prod__meta"><strong>Giá</strong>: 350.000đ</p>
             <div class="cc-prod__btns">
-                <button class="cc-btn-buy" onclick="addCart('Giày Tây Nam',350000)">Mua Ngay</button>
-                <button class="cc-btn-cart" onclick="addCart('Giày Tây Nam',350000)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="cc-btn-buy" onclick="addCart('Giày Tây Nam',350000,'./assets/images/Giay_tay.png')">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Tây Nam',350000,'./assets/images/Giay_tay.png')"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -79,8 +79,8 @@
             <p class="cc-prod__meta"><strong>Size</strong>: 32-42</p>
             <p class="cc-prod__meta"><strong>Giá</strong>: 2.000.000đ</p>
             <div class="cc-prod__btns">
-                <button class="cc-btn-buy" onclick="addCart('Giày Thể Thao Nam',2000000)">Mua Ngay</button>
-                <button class="cc-btn-cart" onclick="addCart('Giày Thể Thao Nam',2000000)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="cc-btn-buy" onclick="addCart('Giày Thể Thao Nam',2000000,'./assets/images/vn-11134207-7r98o-lt3mz9ox97rtf1.jpg')">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Thể Thao Nam',2000000,'./assets/images/vn-11134207-7r98o-lt3mz9ox97rtf1.jpg')"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -90,8 +90,8 @@
             <p class="cc-prod__meta"><strong>Size</strong>: 24-36</p>
             <p class="cc-prod__meta"><strong>Giá</strong>: 500.000đ</p>
             <div class="cc-prod__btns">
-                <button class="cc-btn-buy" onclick="addCart('Giày Búp Bê Nữ',500000)">Mua Ngay</button>
-                <button class="cc-btn-cart" onclick="addCart('Giày Búp Bê Nữ',500000)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="cc-btn-buy" onclick="addCart('Giày Búp Bê Nữ',500000,'./assets/images/giay-bup-be.jpg')">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Búp Bê Nữ',500000,'./assets/images/giay-bup-be.jpg')"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -101,8 +101,8 @@
             <p class="cc-prod__meta"><strong>Size</strong>: 34-42</p>
             <p class="cc-prod__meta"><strong>Giá</strong>: 2.000.000đ</p>
             <div class="cc-prod__btns">
-                <button class="cc-btn-buy" onclick="addCart('Giày Cao Gót',2000000)">Mua Ngay</button>
-                <button class="cc-btn-cart" onclick="addCart('Giày Cao Gót',2000000)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="cc-btn-buy" onclick="addCart('Giày Cao Gót',2000000,'./assets/images/giay_cao_got.webp')">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Cao Gót',2000000,'./assets/images/giay_cao_got.webp')"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -112,8 +112,8 @@
             <p class="cc-prod__meta"><strong>Size</strong>: 32-42</p>
             <p class="cc-prod__meta"><strong>Giá</strong>: 300.000đ</p>
             <div class="cc-prod__btns">
-                <button class="cc-btn-buy" onclick="addCart('Giày Sandal Cao Cấp',300000)">Mua Ngay</button>
-                <button class="cc-btn-cart" onclick="addCart('Giày Sandal Cao Cấp',300000)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="cc-btn-buy" onclick="addCart('Giày Sandal Cao Cấp',300000,'./assets/images/dep_co_quai.webp')">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Giày Sandal Cao Cấp',300000,'./assets/images/dep_co_quai.webp')"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -123,8 +123,8 @@
             <p class="cc-prod__meta"><strong>Size</strong>: 22-40</p>
             <p class="cc-prod__meta"><strong>Giá</strong>: 100.000đ</p>
             <div class="cc-prod__btns">
-                <button class="cc-btn-buy" onclick="addCart('Dép Cao Su Cao Cấp',100000)">Mua Ngay</button>
-                <button class="cc-btn-cart" onclick="addCart('Dép Cao Su Cao Cấp',100000)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="cc-btn-buy" onclick="addCart('Dép Cao Su Cao Cấp',100000,'./assets/images/dep-le.jpg')">Mua Ngay</button>
+                <button class="cc-btn-cart" onclick="addCart('Dép Cao Su Cao Cấp',100000,'./assets/images/dep-le.jpg')"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
 
@@ -199,12 +199,23 @@
 
 <script>
     function fmt(n){return n.toLocaleString('vi-VN')+'đ';}
-    function addCart(name,price){
-        let c=JSON.parse(localStorage.getItem('cc_cart')||'[]');
-        const f=c.find(i=>i.name===name);
-        if(f)f.qty+=1;else c.push({name,price,qty:1});
-        localStorage.setItem('cc_cart',JSON.stringify(c));
-        showToast('✓ Đã thêm "'+name+'" vào giỏ hàng');
+    function addCart(name,price,image){
+       let c = JSON.parse(localStorage.getItem('cc_cart') || '[]');
+
+        const f = c.find(i => i.name === name);
+        if(f){
+            f.qty += 1;
+        } else {
+            c.push({
+                name,
+                price,
+                image,
+                qty: 1
+            });
+    }
+
+    localStorage.setItem('cc_cart', JSON.stringify(c));
+    showToast('✓ Đã thêm "'+name+'" vào giỏ hàng');
     }
     function showToast(msg){
         const t=document.getElementById('cc-toast');
